@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.125rem;
+  min-height: 100vh;
+  font-weight: 400;
+}
+
+/*===============*/
+/*=======header========*/
+/*===============*/
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  padding: 2rem 2rem;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  font-size: 1rem;
+  color: gray;
+}
+.invite-button {
+  border-radius: 999px;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  background: linear-gradient(45deg, hsl(192, 69%, 51%), hsl(136, 64%, 51%));
+  color: white;
+}
