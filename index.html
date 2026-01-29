@@ -20,31 +20,25 @@
     <link href="style.css" rel="stylesheet" />
     <link href="token.css" rel="stylesheet" />
     <title>Frontend Mentor | Digitalbank landing page</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    <header class="container">
-      <img class="logo" src="/images/logo-dark.svg" />
-      <nav>
-        <ul class="main-nav">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Blog</li>
-          <li>Careers</li>
-        </ul>
-      </nav>
-      <button class="invite-button">Request Invite</button>
+    <header class="header-outer">
+      <div class="header-inner">
+        <img class="logo" src="/images/logo-dark.svg" />
+        <nav>
+          <ul class="main-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Career</a></li>
+          </ul>
+        </nav>
+        <button class="invite-button">Request Invite</button>
+        <button class="menu-toggle" aria-label="Open menu">
+          <img src="/images/icon-hamburger.svg" alt="" />
+        </button>
+      </div>
     </header>
     <main>
       <div class="hero">
@@ -159,10 +153,16 @@
       <div class="footer-left">
         <img class="logo" src="/images/logo-light.svg" />
         <div class="footer-icons">
-          <img src="/images/icon-facebook.svg" />
-          <img src="/images/icon-youtube.svg" />
-          <img src="/images/icon-pinterest.svg" />
-          <img src="/images/icon-instagram.svg" />
+          <a href="#" aria-label="Facebook">
+            <img src="/images/icon-facebook.svg"
+          /></a>
+          <a href="#" aria-label="Youtube">
+            <img src="/images/icon-youtube.svg" /></a
+          ><a href="#" aria-label="Pinterest">
+            <img src="/images/icon-pinterest.svg" /></a
+          ><a href="#" aria-label="Instagram">
+            <img src="/images/icon-instagram.svg"
+          /></a>
         </div>
       </div>
       <nav>

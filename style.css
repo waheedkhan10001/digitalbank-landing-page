@@ -22,32 +22,43 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 400;
+  font-weight: 700;
 }
 p {
   color: var(--color-primary);
 }
+img {
+  display: block;
+}
 /*===============*/
 /*=======header========*/
 /*===============*/
-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /* border-bottom: 1px solid lightgray; */
-  padding: 2rem 2rem;
-  /* width: 80%; */
-  margin: 0 auto;
-  gap: 2rem;
-  background-color: color-mix(in srgb, black 2%, white);
+.header-outer {
+  background-color: hsl(0, 0%, 98%);
 }
-
+.header-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+  gap: 2rem;
+}
 .main-nav {
   display: flex;
   gap: 2rem;
   list-style: none;
+  padding: 0;
+  margin: 0;
   font-size: 1rem;
   color: var(--color-primary);
+}
+.main-nav a {
+  text-decoration: none;
+  color: inherit;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid transparent;
 }
 .invite-button {
   border-radius: 999px;
@@ -56,20 +67,21 @@ header {
   background: linear-gradient(45deg, hsl(192, 69%, 51%), hsl(136, 64%, 51%));
   color: white;
 }
-
+.menu-toggle {
+  display: none;
+}
 /*===============*/
 /*=======hero========*/
 /*===============*/
 .hero {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  background-color: color-mix(in srgb, black 4%, white);
+  background-color: hsl(0, 0%, 98%);
   background-image: url("/images/bg-intro-desktop.svg");
-  background-position: top -340px right -620px;
+  background-position: top -250px right -370px;
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 760px;
-  padding-left: 6rem;
+  background-size: auto;
+  min-height: 750px;
 }
 .hero-content {
   display: flex;
@@ -77,7 +89,7 @@ header {
   align-self: center;
   align-items: flex-start;
   gap: 2rem;
-  padding-right: 9rem;
+  padding: 6rem 6rem;
 }
 .hero-content h1 {
   line-height: 4rem;
@@ -92,9 +104,9 @@ header {
 .hero-visuals img {
   position: absolute;
   width: 100%;
-  height: 950px;
+  height: auto;
   object-fit: cover;
-  object-position: 150px -185px;
+  object-position: 140px -185px;
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.2));
 }
 
@@ -107,7 +119,7 @@ header {
   align-items: flex-start;
   padding: 6rem;
   gap: 2rem;
-  background-color: color-mix(in srgb, black 6%, white);
+  background-color: hsl(220, 16%, 96%);
 }
 .why {
   display: flex;
@@ -138,7 +150,7 @@ header {
   flex-direction: column;
   gap: 2rem;
   padding: 6rem;
-  background-color: color-mix(in srgb, black 2%, white);
+  background-color: hsl(0, 0%, 98%);
 }
 
 .articles {
@@ -151,6 +163,10 @@ header {
   flex-direction: column;
   gap: 0.5rem;
   background-color: white;
+}
+.article h4 {
+  color: hsl(233, 26%, 24%);
+  line-height: 1.4;
 }
 .article img {
   width: 100%;
@@ -174,7 +190,7 @@ header {
 /*=======footer========*/
 /*===============*/
 .footer {
-  background-color: #2e324f;
+  background-color: hsl(233, 26%, 24%);
   color: white;
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
@@ -196,12 +212,19 @@ header {
   justify-content: space-between;
   gap: 2rem;
 }
+.footer-icons a {
+  display: inline-flex;
+  text-decoration: none;
+}
 .footer-nav {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   font-size: 1rem;
+}
+.footer-nav li {
+  cursor: pointer;
 }
 .footer-right {
   display: flex;
@@ -211,4 +234,138 @@ header {
 }
 .footer-copy {
   font-size: 0.8rem;
+}
+/*===============*/
+/*=======active========*/
+/*===============*/
+.main-nav li:hover {
+  position: relative;
+  cursor: pointer;
+}
+.main-nav a {
+  transition: border-bottom-color 0.2s ease;
+}
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  border-bottom: 3px solid hsl(136, 64%, 51%);
+}
+.article h4:hover {
+  color: hsl(136, 64%, 51%);
+  cursor: pointer;
+}
+.invite-button {
+  transition:
+    filter 0.2s ease,
+    transform 0.1s ease;
+}
+.invite-button:active {
+  transform: scale(0.97);
+}
+.invite-button:focus-visible {
+  outline: 2px solid hsl(192, 69%, 51%);
+  outline-offset: 2px;
+}
+.footer-icons img {
+  transition: opacity 0.2sec ease;
+}
+.footer-icons img:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.footer-icons a:focus-visible {
+  outline: 2px solid hsl(136, 64%, 51%);
+  outline-offset: 4px;
+}
+.footer-nav li:hover,
+.footer-nav li:focus-visible {
+  color: hsl(136, 64%, 51%);
+}
+.attribution {
+  text-align: center;
+}
+/*===============*/
+/*=======media query========*/
+/*===============*/
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 1.5rem 1rem;
+    justify-content: space-between;
+  }
+  .main-nav {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .header-inner .invite-button {
+    display: none;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0rem 1rem;
+    text-align: center;
+  }
+  .hero-content {
+    align-items: center;
+  }
+  .hero-visuals {
+    order: -1;
+  }
+  .hero-visuals img {
+    position: static;
+  }
+  .choosing {
+    align-items: center;
+    text-align: center;
+  }
+  .why {
+    align-items: center;
+  }
+  .features {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .feature {
+    text-align: center;
+    align-items: center;
+  }
+  .articles {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .latest {
+    padding: 4rem 1rem;
+  }
+  .article {
+    align-items: center;
+    text-align: center;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .article img {
+    width: 100%;
+    height: auto;
+  }
+  .author,
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .latest h2 {
+    text-align: center;
+  }
+  .footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+  }
+  .footer-left,
+  .footer-right {
+    align-items: center;
+  }
+  .footer-nav {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
