@@ -309,8 +309,9 @@ img {
   .main-nav {
     display: none;
   }
-  .menu-toggle {
+  .header-inner .menu-toggle {
     display: block;
+    cursor: pointer;
   }
   .header-inner .invite-button {
     display: none;
