@@ -309,12 +309,13 @@ img {
   .main-nav {
     display: none;
   }
+
+  .header-inner .invite-button {
+    display: none;
+  }
   .header-inner .menu-toggle {
     display: block;
     cursor: pointer;
-  }
-  .header-inner .invite-button {
-    display: none;
   }
   .hero {
     grid-template-columns: 1fr;
