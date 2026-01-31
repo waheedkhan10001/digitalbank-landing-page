@@ -10,11 +10,11 @@ Built with semantic HTML, CSS Grid/Flexbox, and design tokens, following best fr
 
 ### Desktop View (1440px)
 
-![Desktop View](./screenshots/desktop-1440px.png)
+![Desktop View](./Screenshots/desktop-1440px.png)
 
 ### Mobile View (768px)
 
-![Mobile View](./screenshots/mobile-768px.png)
+![Mobile View](./Screenshots/mobile-768px.png)
 
 🚀 Features
 
