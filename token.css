@@ -1,3 +1,11 @@
 :root {
-  --color-primary: hsl(233, 8%, 62%);
+  --color-text: hsl(233, 8%, 62%);
+  --color-dark: hsl(233, 26%, 24%);
+  --color-accent: hsl(136, 64%, 51%);
+  --color-cyan: hsl(192, 69%, 51%);
+  --color-bg-light: hsl(0, 0%, 98%);
+  --spacing-section: 6rem;
+  --spacing-large: 4rem;
+  --spacing-medium: 2rem;
+  --spacing-small: 1rem;
 }
