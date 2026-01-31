@@ -102,7 +102,7 @@ img {
 .hero-visuals::before {
   content: "";
   position: absolute;
-  background-image: url("/images/bg-intro-desktop.svg");
+  background-image: url("./images/bg-intro-desktop.svg");
   top: 0;
   bottom: 0;
   left: 0;
@@ -327,7 +327,7 @@ img {
   }
   .hero-visuals::before {
     width: 100%;
-    background-image: url("/images/bg-intro-mobile.svg");
+    background-image: url("./images/bg-intro-mobile.svg");
     background-size: cover;
     background-position: center top -190px;
     padding: 0;
